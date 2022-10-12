@@ -10,12 +10,17 @@
   background-color: white;
 }
 
-.info-lateral {
-  padding-top: 400px;
-}
 
 #section_2 {
   background-color: whitesmoke;
+}
+
+.logo {
+  padding: 20px;
+}
+
+.info-lateral {
+  padding-top: 370px;
 }
 
 .btn {
