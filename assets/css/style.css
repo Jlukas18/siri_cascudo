@@ -10,8 +10,17 @@
   background-color: white;
 }
 
+
 #section_2 {
   background-color: whitesmoke;
+}
+
+.logo {
+  padding: 20px;
+}
+
+.info-lateral {
+  padding-top: 370px;
 }
 
 .btn {
@@ -52,25 +61,49 @@
   margin-top: 10px;
   display: flex;
   width: 100%;
-  border: 1px solid grey;
+  height: 30px;
 }
 
 .nbr-request {
   width: 150px;
+  background: #B3B3B3;
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
 .itens {
   width: 400px;
+  margin-left: 5px;
+  background: #B3B3B3;
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
 .type {
   width: 150px;
+  margin-left: 5px;
+  background: #B3B3B3;
+  padding-left: 5px;
+  padding-top: 5px;
+
 }
 
 .value {
   width: 150px;
+  margin-left: 5px;
+  background: #B3B3B3;
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
 .status {
   width: 150px;
+  margin-left: 5px;
+  background: #B3B3B3;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.roda-pe {
+  margin-left: 500px;
 }
