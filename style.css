@@ -33,6 +33,11 @@
   border-color: aliceblue;
 }
 
+.btn-link {
+  color: aliceblue
+}
+
+
 .filter {
   margin-left: 5px;
 }
@@ -106,4 +111,77 @@
 
 .roda-pe {
   margin-left: 500px;
+}
+
+/* css pagina novos.html */
+.new {
+  padding-left: 10px;
+}
+
+.consumo {
+  display: flex;
+  ;
+}
+
+.delivery {
+  padding-left: 3px;
+  margin-top: -10px;
+}
+
+.salao {
+  padding-left: 20px;
+  margin-top: -10px;
+}
+
+.buscar {
+  margin-left: 5px;
+}
+
+.cdg-produto {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
+.buscar2 {
+  width: 100px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border-color: rgb(240, 93, 7);
+  color: rgb(240, 93, 7);
+}
+
+.cdg {
+  width: 100px;
+  margin-left: 5px;
+  background: #B3B3B3;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.pdt {
+  width: 600px;
+  margin-left: 5px;
+  background: #B3B3B3;
+  padding-left: 5px;
+  padding-top: 5px;
+
+}
+
+.qtd {
+  width: 150px;
+  margin-left: 5px;
+  background: #B3B3B3;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.vlr {
+  width: 150px;
+  margin-left: 5px;
+  background: #B3B3B3;
+  padding-left: 5px;
+  padding-top: 5px;
 }
