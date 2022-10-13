@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos os Pedidos</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="grid">
+      <div id="section_1">
+        <img src="assets/img/Marca.png" class="logo" />
+
+        <div class="info-lateral">
+          <p>Operador:Marilucia</p>
+          <p>Data-Hora: 12/08/20202 - 13:30</p>
+          <p>Versao:1.0</p>
+        </div>
+      </div>
+      <div id="section_2">
+        <div class="new">
+          <h1>Novo Pedido</h1>
+          <p>Tipo de consumo</p>
+          <div class="consumo">
+            <p class="delivery">
+              <img src="assets/img/checked.png" /> Delivery
+            </p>
+            <p class="salao"><img src="assets/img/checked.png" /> Salao</p>
+          </div>
+        </div>
+
+        <div class="buscar">
+          <p>Buscar o produto</p>
+          <input
+            type="text"
+            placeholder="Codigo do produto"
+            class="cdg-produto"
+          />
+          <input type="button" value="Buscar" class="buscar2" />
+        </div>
+
+        <div class="pedido">
+          <div class="pdd-qnt">
+            <p>Quantidade</p>
+            <input type="number" placeholder="0" />
+          </div>
+          <div class="pdd-pdt">
+            <p>Produto</p>
+            <input type="text" placeholder="Nome do produto" />
+          </div>
+          <div class="pdd-prç">
+            <p>Preço</p>
+            <input type="number" placeholder="R$00,00" />
+          </div>
+        </div>
+
+        <div class="btn-adc">
+          <button>Adicionar pedido</button>
+        </div>
+
+        <div class="dados">
+          <div class="cdg">Codigo</div>
+          <div class="pdt">Produto</div>
+          <div class="qtd">Quantidade</div>
+          <div class="vlr">Valor</div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <footer class="roda-pe">
+      Copyright@ 2022 Siri Cascudo-Todos os direitos reservados
+    </footer>
+  </body>
+</html>
