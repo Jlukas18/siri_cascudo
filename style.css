@@ -120,7 +120,6 @@
 
 .consumo {
   display: flex;
-  ;
 }
 
 .delivery {
@@ -134,7 +133,9 @@
 }
 
 .buscar {
-  margin-left: 5px;
+  margin-left: 10px;
+  line-height: 1px;
+  margin-bottom: 10px;
 }
 
 .cdg-produto {
@@ -153,6 +154,57 @@
   color: rgb(240, 93, 7);
 }
 
+.pedido {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.pdd-qnt {
+  line-height: 1px;
+}
+
+.pdd-qnt>input,
+.pdd-prç>input {
+  width: 200px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.pdd-pdt {
+  margin-left: 10px;
+  line-height: 1px;
+}
+
+.pdd-pdt>input {
+  width: 590px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.pdd-prç {
+  margin-left: 10px;
+  line-height: 1px;
+}
+
+.btn-adc {
+  padding-top: 15px;
+}
+
+.btn-adc>button {
+  width: 270px;
+  height: 30px;
+  border-radius: 5px;
+  border-color: #B3B3B3;
+  margin-left: 770px;
+  background-color: #B3B3B3;
+  color: antiquewhite;
+}
+
+.dados {
+  padding-top: 20px;
+}
+
 .cdg {
   width: 100px;
   margin-left: 5px;
@@ -167,7 +219,6 @@
   background: #B3B3B3;
   padding-left: 5px;
   padding-top: 5px;
-
 }
 
 .qtd {
