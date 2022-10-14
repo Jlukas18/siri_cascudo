@@ -4,37 +4,98 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="main.js"></script>
     <title>Document</title>
   </head>
   <body>
     <div id="grid">
       <div id="section_1">
-        <img src="assets/img/Marca.png" />
-      </div>
-      <div id="section_2">
-        <h1>Todos os pedidos</h1>
-        <button class="btn">
-          <a href="novos.html" class="btn-link">Novos Pedidos</a>
-        </button>
+        <img src="assets/img/Marca.png" class="logo" />
 
-        <div class="filter">
-          <h3>Filtar por:</h3>
-          <input type="button" value="Tipo" class="btn-type" />
-          <input type="button" value="Status" class="btn-status" />
-          <input type="button" value="Imprimir" class="btn-print" />
+        <div class="info-lateral">
+          <p>Operador:Marilucia</p>
+          <p>Data-Hora: 12/08/20202 - 13:30</p>
+          <p>Versao:1.0</p>
+        </div>
+      </div>
+
+      <div id="section_2">
+        <div id="page-todos">
+          <h1>Todos os pedidos</h1>
+          <button class="btn">
+            <a href="novos.html" class="btn-link">Novos Pedidos</a>
+          </button>
+
+          <div class="filter">
+            <h3>Filtar por:</h3>
+            <input type="button" value="Tipo" class="btn-type" />
+            <input type="button" value="Status" class="btn-status" />
+            <input type="button" value="Imprimir" class="btn-print" />
+          </div>
+
+          <div class="dados">
+            <div class="nbr-request">N do pedido</div>
+            <div class="itens">Itens</div>
+            <div class="type">Tipo</div>
+            <div class="value">Valor</div>
+            <div class="status">Status</div>
+          </div>
         </div>
 
-        <div class="dados">
-          <div class="nbr-request">N do pedido</div>
-          <div class="itens">Itens</div>
-          <div class="type">Tipo</div>
-          <div class="value">Valor</div>
-          <div class="status">Status</div>
+        <div id="page-novos">
+          <div class="new">
+            <h1>Novo Pedido</h1>
+            <p>Tipo de consumo</p>
+            <div class="consumo">
+              <p class="delivery">
+                <img src="assets/img/checked.png" /> Delivery
+              </p>
+              <p class="salao"><img src="assets/img/checked.png" /> Salao</p>
+            </div>
+          </div>
+
+          <div class="buscar">
+            <p>Buscar o produto</p>
+            <input
+              type="text"
+              placeholder="Codigo do produto"
+              class="cdg-produto"
+            />
+            <input type="button" value="Buscar" class="buscar2" />
+          </div>
+
+          <div class="pedido">
+            <div class="pdd-qnt">
+              <p>Quantidade</p>
+              <input type="number" placeholder="0" />
+            </div>
+            <div class="pdd-pdt">
+              <p>Produto</p>
+              <input type="text" placeholder="Nome do produto" />
+            </div>
+            <div class="pdd-prç">
+              <p>Preço</p>
+              <input type="number" placeholder="R$00,00" />
+            </div>
+          </div>
+
+          <div class="btn-adc">
+            <button>Adicionar pedido</button>
+          </div>
+
+          <div class="dados">
+            <div class="cdg">Codigo</div>
+            <div class="pdt">Produto</div>
+            <div class="qtd">Quantidade</div>
+            <div class="vlr">Valor</div>
+          </div>
         </div>
       </div>
     </div>
     <hr />
-    <footer>Roda pe</footer>
+    <footer class="roda-pe">
+      Copyright@ 2022 Siri Cascudo-Todos os direitos reservados
+    </footer>
   </body>
 </html>
