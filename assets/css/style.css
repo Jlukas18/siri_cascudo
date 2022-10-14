@@ -1,7 +1,7 @@
 #grid {
   display: grid;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   grid-template-columns: 300px 2fr;
 }
 
@@ -15,7 +15,7 @@
 }
 
 #page-novos {
-  display: ;
+  display: fixed;
 }
 
 .logo {
