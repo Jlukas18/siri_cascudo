@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <script src="main.js"></script>
+    <script src="assets/js/main.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -23,9 +23,7 @@
       <div id="section_2">
         <div id="page-todos">
           <h1>Todos os pedidos</h1>
-          <button class="btn">
-            <a href="novos.html" class="btn-link">Novos Pedidos</a>
-          </button>
+          <button onclick="trocaTela()" class="btn">Novos Pedidos</button>
 
           <div class="filter">
             <h3>Filtar por:</h3>
@@ -43,7 +41,7 @@
           </div>
         </div>
 
-        <div id="page-novos">
+        <div id="page-novos" onclick="esconderNovo()">
           <div class="new">
             <h1>Novo Pedido</h1>
             <p>Tipo de consumo</p>
