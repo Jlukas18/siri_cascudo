@@ -23,13 +23,18 @@
       <div id="section_2">
         <div id="page-todos">
           <h1>Todos os pedidos</h1>
-          <button onclick="trocaTela()" class="btn">Novos Pedidos</button>
+          <button onclick="trocaTela()" class="btn-new-products">
+            <img src="assets/img/adicionar.png" />
+            Novos Pedidos
+          </button>
 
           <div class="filter">
             <h3>Filtar por:</h3>
             <input type="button" value="Tipo" class="btn-type" />
             <input type="button" value="Status" class="btn-status" />
-            <input type="button" value="Imprimir" class="btn-print" />
+            <button class="btn-print">
+              <img src="assets/img/lupa.png" /> Imprimir
+            </button>
           </div>
 
           <div class="dados">
@@ -56,6 +61,8 @@
           <div class="buscar">
             <p>Buscar o produto</p>
             <input
+              img
+              src="assests/img/lupa.png"
               type="text"
               placeholder="Codigo do produto"
               class="cdg-produto"

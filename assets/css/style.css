@@ -26,14 +26,16 @@
   padding-top: 370px;
 }
 
-.btn {
-  width: 200px;
-  height: 30px;
+.btn-new-products {
+  width: 158px;
+  height: 38px;
   background-color: blue;
   color: white;
   border: 10px;
-  border-radius: 4px;
+  border-radius: 8px;
   border-color: aliceblue;
+  gap: 16px;
+  padding: 12px 16px;
 }
 
 .btn-link {
@@ -57,11 +59,13 @@
 
 .btn-print {
   margin-left: 600px;
-  width: 150px;
-  height: 25px;
+  width: 158px;
+  height: 38px;
   border-radius: 4px;
-  border-color: rgb(240, 93, 7);
-  color: rgb(240, 93, 7);
+  border-color: #FF8B20;
+  color: #FF8B20;
+  border: 1px solid #FF8B20;
+  border-radius: 8px;
 }
 
 .dados {
@@ -116,7 +120,7 @@
   margin-left: 500px;
 }
 
-/* css pagina novos.html */
+/* css novos pedidos */
 .new {
   padding-left: 10px;
 }
@@ -149,12 +153,13 @@
 }
 
 .buscar2 {
-  width: 100px;
-  height: 30px;
-  margin-left: 10px;
-  border-radius: 5px;
-  border-color: rgb(240, 93, 7);
-  color: rgb(240, 93, 7);
+  width: 158px;
+  height: 38px;
+  border-radius: 4px;
+  border-color: #FF8B20;
+  color: #FF8B20;
+  border: 1px solid #FF8B20;
+  border-radius: 8px;
 }
 
 .pedido {
