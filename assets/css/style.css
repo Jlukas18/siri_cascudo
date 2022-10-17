@@ -76,7 +76,7 @@
   height: 30px;
 }
 
-.nbr-request {
+.number-request {
   width: 150px;
   background: #B3B3B3;
   padding-left: 5px;
@@ -145,7 +145,7 @@
   margin-bottom: 10px;
 }
 
-.cdg-produto {
+.codigo-produto {
   width: 300px;
   height: 30px;
   border-radius: 5px;
@@ -159,59 +159,9 @@
   border-color: #FF8B20;
   color: #FF8B20;
   border: 1px solid #FF8B20;
-  border-radius: 8px;
+  border-radius: git 8px;
 }
 
-.pedido {
-  display: flex;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
-.pdd-qnt {
-  line-height: 1px;
-}
-
-.pdd-qnt>input,
-.pdd-prç>input {
-  width: 200px;
-  height: 30px;
-  border-radius: 4px;
-}
-
-.pdd-pdt {
-  margin-left: 10px;
-  line-height: 1px;
-}
-
-.pdd-pdt>input {
-  width: 590px;
-  height: 30px;
-  border-radius: 4px;
-}
-
-.pdd-prç {
-  margin-left: 10px;
-  line-height: 1px;
-}
-
-.btn-adc {
-  padding-top: 15px;
-}
-
-.btn-adc>button {
-  width: 270px;
-  height: 30px;
-  border-radius: 5px;
-  border-color: #B3B3B3;
-  margin-left: 770px;
-  background-color: #B3B3B3;
-  color: antiquewhite;
-}
-
-.dados {
-  padding-top: 20px;
-}
 
 
 .pedido {
@@ -220,38 +170,38 @@
   margin-top: 10px;
 }
 
-.pdd-qnt {
+.pedido-quantidade {
   line-height: 1px;
 }
 
-.pdd-qnt>input,
-.pdd-prç>input {
+.pedido-quantidade>input,
+.pedido-preço>input {
   width: 200px;
   height: 30px;
   border-radius: 4px;
 }
 
-.pdd-pdt {
+.pedido-produto {
   margin-left: 10px;
   line-height: 1px;
 }
 
-.pdd-pdt>input {
+.pedido-produto>input {
   width: 590px;
   height: 30px;
   border-radius: 4px;
 }
 
-.pdd-prç {
+.pedido-preço {
   margin-left: 10px;
   line-height: 1px;
 }
 
-.btn-adc {
+.btn-adicionar {
   padding-top: 15px;
 }
 
-.btn-adc>button {
+.btn-adicionar>button {
   width: 270px;
   height: 30px;
   border-radius: 5px;
