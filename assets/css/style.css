@@ -1,11 +1,12 @@
 #grid {
   display: grid;
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   grid-template-columns: 300px 2fr;
 }
 
 #section_1 {
+  width: 100%;
   background-color: white;
 }
 
@@ -18,7 +19,7 @@
 }
 
 .logo {
-  padding: 20px;
+  padding: 10px;
 }
 
 .info-lateral {
@@ -41,9 +42,11 @@
   color: aliceblue
 }
 
+
 .filter {
   margin-left: 5px;
 }
+
 
 .btn-type,
 .btn-status {
@@ -74,14 +77,14 @@
 }
 
 .number-request {
-  width: 150px;
+  width: 140px;
   background: #B3B3B3;
   padding-left: 5px;
   padding-top: 5px;
 }
 
 .itens {
-  width: 380px;
+  width: 400px;
   margin-left: 5px;
   background: #B3B3B3;
   padding-left: 5px;
@@ -242,4 +245,33 @@
   background: #B3B3B3;
   padding-left: 5px;
   padding-top: 5px;
+}
+
+.div-salvar {
+  position: relative;
+  margin-top: 100px;
+  margin-left: 500px;
+}
+
+#btn-cancelar {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border-color: #B3B3B3;
+  background-color: #ffffff;
+  color: #4A08FF;
+
+}
+
+#btn-cancelar:hover {
+  color: #4e4e4e;
+}
+
+#btn-salvar {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border-color: #B3B3B3;
+  background-color: #B3B3B3;
+  color: antiquewhite;
 }

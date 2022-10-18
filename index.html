@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -47,6 +47,7 @@
         </div>
 
         <div hidden id="page-novos">
+
           <div class="new">
             <h1>Novo Pedido</h1>
             <p>Tipo de consumo</p>
@@ -64,16 +65,17 @@
               type="text"
               placeholder="Codigo do produto"
               class="codigo-produto"
+              id="codigo-produto"
             />
-            <input type="button" value="Buscar" class="buscar2" />
+            <input type="button" value="Buscar" class="buscar2" id="buscar2" onclick="filtrarDadosPorNome()" />
           </div>
 
           <div class="pedido">
-            <div class="pedido-quantidade">
+            <div class="pedido-quantidade" id="quantidade">
               <p>Quantidade</p>
               <input type="number" placeholder="0" />
             </div>
-            <div class="pedido-produto">
+            <div class="pedido-produto" id="produto">
               <p>Produto</p>
               <input type="text" placeholder="Nome do produto" />
             </div>
@@ -84,7 +86,7 @@
           </div>
 
           <div class="btn-adicionar">
-            <button>Adicionar produto</button>
+            <button onclick="listarTabelaProdutos()">Adicionar pedido</button>
           </div>
 
           <div class="dados">
@@ -93,10 +95,16 @@
             <div class="qtd">Quantidade</div>
             <div class="vlr">Valor</div>
           </div>
+                <div class="div-salvar">
+          <button id="btn-cancelar" onclick="limparDadosInpBuscar()">Cancelar</button>
+          <button id="btn-salvar" onclick="btnSalvarPedido()">Salvar</button>
         </div>
+
+        <div><p id="demo">Vai mostrar o valor total!</p></div>
+      </div>
       </div>
     </div>
-    <hr />
+    <br>
     <footer class="roda-pe">
       Copyright@ 2022 Siri Cascudo-Todos os direitos reservados
     </footer>
