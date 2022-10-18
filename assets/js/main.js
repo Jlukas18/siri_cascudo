@@ -1,35 +1,65 @@
 
 let listaPedidos= [
   {
-    id: 1,
-    product: "Hamburguer de Siri",
-    price: 7.8,
+    id: 1001,
+    product: "Super SMACH COMBO Progromado -Hamburguer + Fritas",
+    price: R$55,
     
   },
   {
-      id: 2,
-      product: "Hamburguer Bob Esponja",
-      price: 7.9,
+      id: 1002,
+      product: "SMACH VariavelBurguer -Hamburguer com bacon",
+      price: R$45,
       
   },
   {
-    id: 3,
-    product: "Refri",
-    price: 7.2,
+    id: 1003,
+    product: "SMACH BUG EM PROG - Hambuerguer meio torto",
+    price: R$25,
     
   },
   {
-      id: 4,
-      product: "Salmão grelhado",
-      price: 7.3,
+      id: 1004,
+      product: "Combo Econimico SMACH Char 1 - PAo com carne ",
+      price: R$15,
       
   },
   {
-      id: 5,
-      product: "Salsichão",
-      price: 7.4,
+      id: 1005,
+      product: "Especial SMACH CSS - Hambuguer colorido e alinhado",
+      price: R$65,
       
-  }
+  },
+  {
+    id: 2001,
+    product: "Refrigerante 350ml",
+    price: R$8,
+    
+},
+{
+  id: 2002,
+  product: "Agua 500ml",
+  price: R$5,
+  
+},
+{
+  id: 2003,
+  product: "Suco 350ml",
+  price: R$7,
+  
+},
+{
+  id: 3001,
+  product: "Sorvete 300ml",
+  price: R$15,
+  
+},
+{
+  id: 3002,
+  product: "Sobremesa doce SMACH ARRAY",
+  price: R$50,
+  
+},
   
 ];
 
