@@ -47,15 +47,22 @@
         </div>
 
         <div hidden id="page-novos">
-
           <div class="new">
             <h1>Novo Pedido</h1>
             <p>Tipo de consumo</p>
             <div class="consumo">
-              <p class="delivery">
-                <img src="assets/img/checked.png" /> Delivery
-              </p>
-              <p class="salao"><img src="assets/img/checked.png" /> Salao</p>
+              <input
+                type="radio"
+                id="delivery-Input"
+                name="delivery_1"
+                class="custom-Input"
+              /><label for="delivery-Input">Delivery</label>
+              <input
+                type="radio"
+                id="salao-Input"
+                name="delivery_1"
+                class="custom-Input"
+              /><label for="salao-Input">Salão</label>
             </div>
           </div>
 
@@ -67,7 +74,13 @@
               class="codigo-produto"
               id="codigo-produto"
             />
-            <input type="button" value="Buscar" class="buscar2" id="buscar2" onclick="filtrarDadosPorNome()" />
+            <input
+              type="button"
+              value="Buscar"
+              class="buscar2"
+              id="buscar2"
+              onclick="filtrarDadosPorNome()"
+            />
           </div>
 
           <div class="pedido">
@@ -95,16 +108,18 @@
             <div class="qtd">Quantidade</div>
             <div class="vlr">Valor</div>
           </div>
-                <div class="div-salvar">
-          <button id="btn-cancelar" onclick="limparDadosInpBuscar()">Cancelar</button>
-          <button id="btn-salvar" onclick="btnSalvarPedido()">Salvar</button>
-        </div>
+          <div class="div-salvar">
+            <button id="btn-cancelar" onclick="limparDadosInpBuscar()">
+              Cancelar
+            </button>
+            <button id="btn-salvar" onclick="btnSalvarPedido()">Salvar</button>
+          </div>
 
-        <div><p id="demo">Vai mostrar o valor total!</p></div>
-      </div>
+          <div><p id="demo">Vai mostrar o valor total!</p></div>
+        </div>
       </div>
     </div>
-    <br>
+    <br />
     <footer class="roda-pe">
       Copyright@ 2022 Siri Cascudo-Todos os direitos reservados
     </footer>

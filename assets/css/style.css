@@ -127,6 +127,16 @@
 
 .consumo {
   display: flex;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+#salao-Input {
+  margin-left: 20px;
+}
+
+.new>div {
+  margin-bottom: 50px;
 }
 
 .delivery {
