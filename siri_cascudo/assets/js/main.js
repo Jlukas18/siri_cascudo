@@ -3,44 +3,59 @@ let listaPedidos= [
   {
     id: 1,
     product: "Hamburguer de Siri",
-    qty: 5,
     price: 7.8,
     
   },
   {
       id: 2,
-      product: "Hamburguer de Siri 2",
-      qty: 5,
+      product: "Hamburguer Bob Esponja",
       price: 7.9,
       
   },
   {
     id: 3,
-    product: "Hamburguer de Siri 3",
-    qty: 5,
+    product: "Refri",
     price: 7.2,
     
   },
   {
       id: 4,
-      product: "Hamburguer de Siri 4",
-      qty: 5,
+      product: "Salmão grelhado",
       price: 7.3,
       
   },
   {
       id: 5,
-      product: "Hamburguer de Siri 5",
-      qty: 5,
+      product: "Salsichão",
       price: 7.4,
       
   }
   
 ];
 
-let buscar = document.getElementById("buscar2");
+let buscar=document.getElementById("buscar2");
 let precoProduto=document.getElementById("precoProduto");
 let codigoProduto=document.getElementById("codigo-produto");
+let produto=document.getElementById('produto');
+let qty=document.getElementById('quantidade');
+let valor=CalculaTotalProduto();
+
+function trocaTela() {
+  document.getElementById('page-todos').setAttribute('hidden', true)
+  document.getElementById('page-novos').removeAttribute('hidden')
+}
+
+function filtrarDadosPorNome() {
+  alert("entrou!!");
+  let filtrados = [];
+
+  if (buscar.value.toLowerCase() !== "") {
+    filtrados =listaPedidos.filter(pedidos=>pedidos.id == codigoProduto.value);
+  } 
+ 
+  //eu preciso filtrar o id,mas o input tem que receber onome do filtrado.Como faz??
+  produto.value=filtrados.product;
+}
 
 /*function listarTabelaProdutos(filtrados = undefined) {
   console.log('Entrou na função');
@@ -50,52 +65,51 @@ let codigoProduto=document.getElementById("codigo-produto");
 
   lista = filtrados === undefined ? listaPedidos : filtrados;
 
-  lista.forEach((produtos) => {
-    trTds += `<tr><td>${produtos.id}</td>`;
-    trTds += `<td>${produtos.product}</td>`;
-    trTds += `<td>${produtos.qty}</td>`;
-    trTds += `<td>${produtos.price}</td>`;
+  lista.forEach((pedidos) => {
+    trTds += `<tr><td>${pedidos.id}</td>`;
+    trTds += `<td>${pedidos.product}</td>`;
+    trTds += `<td>${pedidos.qty}</td>`;
+    trTds += `<td>${pedidos.valor)}</td>`;??????????
   });
   dados.innerHTML = trTds;
 
   if (lista.length === 0) {
    dados.innerHTML = `<tr><td colspan="5">Nenhum nome encontrado</td></tr>`;
   }
-}*/
+}
 
-function filtrarDadosPorNome() {
-  alert("entrou!!");
-  let filtrados = [];
+CalculaTotalPedido()
+*/
 
-  if (buscar.value.toLowerCase() !== "") {
-    filtrados =listaPedidos.filter(produtos=>produtos.id == codigoProduto.value);
-  } 
-  else {
-    filtrados =  listaPedidos;
-  }
-  console.log(filtrados);
+//fazer função para adcionar produtos na tabelaProdutos,recebendo dos inputs!
+
+
+function CalculaTotalProduto(total,produtos) {
+  return total + produtos.price*qty;
 }
 
 
-/*function CalculaTotalPedido(total,produtos) {
-  return total + produtos.price*produtos.qty;
+
+function CalculaTotalPedido(total,pedido) {
+  return total + pedido.price;
 }
-document.getElementById("demo").innerHTML = listaPedidos.reduce(Compra, 0);*/ 
+document.getElementById("demo").innerHTML = listaPedidos.reduce(Compra, 0);
 //so vai funcionar quando tiver produtos listados na tabela!
 
 
-
-function limparDadosDaTelaForm() {
-  alert('ai meu deus funciona pelo amor de deus!');
+function limparDadosInpBuscar() {
   codigoProduto.value="";
   listarTabelaProdutos(listaPedidos);
 }
 
-function trocaTela() {
-  document.getElementById('page-todos').setAttribute('hidden', true)
-  document.getElementById('page-novos').removeAttribute('hidden')
+function btnSalvarPedido(){
+  //vai trocar de tela(contrario da primeira troca) e vai adcionar o PEDIDO na tabela
+  document.getElementById('page-novos').setAttribute('hidden', true)
+  document.getElementById('page-todos').removeAttribute('hidden')
+
 }
 
-//addEventListener("load", () => listarTabelaProdutos());
+
+addEventListener("load", () => listarTabelaProdutos());
 
 

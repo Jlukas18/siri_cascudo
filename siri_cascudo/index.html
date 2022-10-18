@@ -71,11 +71,11 @@
           </div>
 
           <div class="pedido">
-            <div class="pedido-quantidade">
+            <div class="pedido-quantidade" id="quantidade">
               <p>Quantidade</p>
               <input type="number" placeholder="0" />
             </div>
-            <div class="pedido-produto">
+            <div class="pedido-produto" id="produto">
               <p>Produto</p>
               <input type="text" placeholder="Nome do produto" />
             </div>
@@ -86,7 +86,7 @@
           </div>
 
           <div class="btn-adicionar">
-            <button>Adicionar pedido</button>
+            <button onclick="listarTabelaProdutos()">Adicionar pedido</button>
           </div>
 
           <div class="dados">
@@ -96,8 +96,8 @@
             <div class="vlr">Valor</div>
           </div>
                 <div class="div-salvar">
-          <button id="btn-cancelar" onclick="limparDadosDaTelaForm()">Cancelar</button>
-          <button id="btn-salvar" onclick="CalculaTotalPedido()">Salvar</button>
+          <button id="btn-cancelar" onclick="limparDadosInpBuscar()">Cancelar</button>
+          <button id="btn-salvar" onclick="btnSalvarPedido()">Salvar</button>
         </div>
 
         <div><p id="demo">Vai mostrar o valor total!</p></div>
