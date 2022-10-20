@@ -37,12 +37,17 @@
             </button>
           </div>
 
-          <div class="dados">
-            <div class="number-request">N do pedido</div>
-            <div class="itens">Itens</div>
-            <div class="type">Tipo</div>
-            <div class="value">Valor</div>
-            <div class="status">Status</div>
+          <div class="dados" id="table-body">
+            <table>
+              <tr>
+                <td class="number-request">N do pedido</td>
+                <td class="itens">Itens</td>
+                <td class="type">Tipo</td>
+                <td class="value">Valor</td>
+                <td class="status">Status</td>
+              </tr>
+            </table>
+            <tbody id="tbody"></tbody>
           </div>
         </div>
 
@@ -84,30 +89,36 @@
           </div>
 
           <div class="pedido">
-            <div class="pedido-quantidade" id="quantidade">
+            <div class="pedido-quantidade">
               <p>Quantidade</p>
-              <input type="number" placeholder="0" />
+              <input type="number" placeholder="0" id="quantidade" />
             </div>
-            <div class="pedido-produto" id="produto">
+            <div class="pedido-produto">
               <p>Produto</p>
-              <input type="text" placeholder="Nome do produto" />
+              <input type="text" placeholder="Nome do produto" id="produto" />
             </div>
             <div class="pedido-preço">
               <p>Preço</p>
-              <input type="number" placeholder="R$00,00" />
+              <input type="number" placeholder="R$00,00" id="preco" />
             </div>
           </div>
 
           <div class="btn-adicionar">
-            <button onclick="listarTabelaProdutos()">Adicionar produto</button>
+            <button onclick="adicionarProutos()">Adicionar produto</button>
           </div>
 
           <div class="dados">
-            <div class="cdg">Codigo</div>
-            <div class="pdt">Produto</div>
-            <div class="qtd">Quantidade</div>
-            <div class="vlr">Valor</div>
+            <table>
+              <tr>
+                <th class="cdg">Codigo</th>
+                <th class="pdt">Produto</th>
+                <th class="qtd">Quantidade</th>
+                <th class="vlr">Valor</th>
+              </tr>
+              <tbody id="tbody"></tbody>
+            </table>
           </div>
+
           <div class="div-salvar">
             <button id="btn-cancelar" onclick="limparDadosInpBuscar()">
               Cancelar
