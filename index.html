@@ -37,17 +37,17 @@
             </button>
           </div>
 
-          <div class="dados" id="table-body">
+          <div class="dados">
             <table>
               <tr>
-                <td class="number-request">N do pedido</td>
-                <td class="itens">Itens</td>
-                <td class="type">Tipo</td>
-                <td class="value">Valor</td>
-                <td class="status">Status</td>
+                <th class="number-request">N do pedido</th>
+                <th class="itens">Itens</th>
+                <th class="type">Tipo</th>
+                <th class="value">Valor</th>
+                <th class="status">Status</th>
               </tr>
+              <tbody id="tableBody"></tbody>
             </table>
-            <tbody id="tbody"></tbody>
           </div>
         </div>
 
@@ -120,10 +120,12 @@
           </div>
 
           <div class="div-salvar">
-            <button id="btn-cancelar" onclick="limparDadosInpBuscar()">
+            <button id="btn-cancelar" onclick="limparFormulario()">
               Cancelar
             </button>
-            <button id="btn-salvar" onclick="btnSalvarPedido()">Salvar</button>
+            <button id="btn-salvar" onclick="btnSalvarPedido()">
+              Salvar Pedido
+            </button>
           </div>
 
           <div><p id="demo">Vai mostrar o valor total!</p></div>

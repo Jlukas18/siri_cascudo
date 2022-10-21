@@ -125,6 +125,8 @@
 /* css novos pedidos */
 .new {
   padding-left: 10px;
+  margin-top: -20px;
+  line-height: 10px;
 }
 
 .consumo {
@@ -152,6 +154,7 @@
 }
 
 .buscar {
+  margin-top: -20px;
   margin-left: 10px;
   line-height: 1px;
   margin-bottom: 10px;
@@ -260,9 +263,9 @@
 }
 
 .div-salvar {
-  position: relative;
-  margin-top: 100px;
-  margin-left: 500px;
+  position: static;
+  margin-top: 200px;
+  margin-left: 800px;
 }
 
 #btn-cancelar {

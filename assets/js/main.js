@@ -3,11 +3,18 @@ function trocaTela() {
   document.getElementById('page-novos').removeAttribute('hidden')
 }
 
+function exibirTelalistagem() {
+  document.getElementById('page-novos').setAttribute('hidden', true)
+  document.getElementById('page-todos').removeAttribute('hidden')
+}
+
 let buscar = document.getElementById('buscar2')
 let preco = document.getElementById('preco')
 let codigoProduto = document.getElementById('codigo-produto')
 let produto = document.getElementById('produto')
 let tbody = document.getElementById('tbody')
+let tableBody = document.getElementById('tableBody')
+let pedidos = []
 
 let listaProdutos = [
   {
@@ -78,11 +85,13 @@ function filtrarDadosPorNome() {
 function adicionarProutos() {
   let tr = document.createElement('tr')
 
-  tr.innerHTML = `
-    <td>${codigoProduto.value}</td>
-    <td>${produto.value}</td>
-    <td>${quantidade.value}</td>
-    <td>${preco.value}</td>
+  tbody.innerHTML += `
+    <tr>
+      <td>${codigoProduto.value}</td>
+      <td>${produto.value}</td>
+      <td>${quantidade.value}</td>
+      <td>${preco.value}</td>
+    </tr>
     `
   tbody.appendChild(tr)
 }
@@ -90,6 +99,42 @@ function adicionarProutos() {
 function limparDadosInpBuscar() {
   codigoProduto.value = ''
   listarTabelaProdutos(listaPedidos)
+}
+
+function limparFormulario() {
+  codigoProduto.value = ''
+  produto.value = ''
+  quantidade.value = ''
+  preco.value = ''
+}
+
+function btnSalvarPedido() {
+  let filtrados = []
+
+  if (buscar.value !== '') {
+    filtrados = listaProdutos.filter(
+      pedidos => pedidos.codigo == codigoProduto.value
+    )
+    console.log(filtrados[0].product)
+    produto.value = filtrados[0].product
+    preco.value = filtrados[0].price
+  }
+
+  console.log(pedidos)
+
+  pedidos.push({
+    codigoProduto: codigoProduto.value,
+    produto: produto.value,
+    quantidade: quantidade.value,
+    preco: preco.value
+  })
+
+  tableBody.innerHtml += `
+      <td>${codigoProduto}</td>
+      <td>${produto}</td>
+      <td>${preco}</td>
+    `
+  exibirTelalistagem()
 }
 
 addEventListener('load', () => adicionarProutos())
