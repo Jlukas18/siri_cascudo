@@ -19,11 +19,18 @@ function exibirTelalistagem() {
   document.getElementById('page-todos').removeAttribute('hidden')
 }
 
-function verificaCamposObrigatorios() {
-  var productCode = document.getElementById('numeroProduto')
-  var productQuantity = document.getElementById('quantidade')
-  return productCode.value !== '' && productQuantity.value !== ''
-}
+let buscar = document.getElementById('buscar2')
+let preco = document.getElementById('preco')
+let codigoProduto = document.getElementById('codigo-produto')
+let produto = document.getElementById('produto')
+let tbody = document.getElementById('tbody')
+let tbodyPedidos = document.getElementById('tbodyPedidos')
+let pedidos = []
+let quantidade = document.getElementById('quantidade')
+let cont = 0
+let deliveryInput = document.getElementById('delivery-Input')
+//let salaoInput=document.getElementById("salao-Input")
+let valorProdutos = []
 
 let listaProdutos = [
   {
@@ -93,27 +100,28 @@ function filtrarDadosPorNome() {
 }
 
 function adicionarProdutos() {
-  if (verificaCamposObrigatorios()) {
-    let tr = document.createElement('tr')
+  let tr = document.createElement('tr')
 
-    tbody.innerHTML += `
-      <tr>
-        <td>${codigoProduto.value}</td>
-        <td>${produto.value}</td>
-        <td>${quantidade.value}</td>
-        <td>${preco.value}</td>
-      </tr>
-      `
-    tbody.appendChild(tr)
-    valorProdutos.push(valorTotalProdutos())
-    console.log(valorProdutos)
-    document.getElementById('totalProduto').innerHTML = valorProdutos.reduce(
-      (previousValue, currentValue) => previousValue + currentValue,
-      0
-    )
-  } else {
-    alert('Preencha todos os campos')
-  }
+  tbody.innerHTML += `
+    <tr>
+      <td>${codigoProduto.value}</td>
+      <td>${produto.value}</td>
+      <td>${quantidade.value}</td>
+      <td>${preco.value}</td>
+    </tr>
+    `
+  tbody.appendChild(tr)
+  valorProdutos.push(valorTotalProdutos())
+  console.log(valorProdutos)
+  document.getElementById('totalProduto').innerHTML = valorProdutos.reduce(
+    (previousValue, currentValue) => previousValue + currentValue,
+    0
+  )
+}
+
+function limparDadosInpBuscar() {
+  codigoProduto.value = ''
+  listarTabelaProdutos(listaPedidos)
 }
 
 function limparFormulario() {
@@ -122,7 +130,6 @@ function limparFormulario() {
   quantidade.value = ''
   preco.value = ''
   tbody.innerHTML = ''
-
   exibirTelalistagem()
 }
 
@@ -133,23 +140,25 @@ function limparFormulario() {
 //o <td> valor do pedido tem que receber uma variavel contendo o return da função valorTotalProdutos()
 
 function btnSalvarPedido() {
+  exibirTelalistagem()
+  let pedidos = []
+  pedidos.push(tbody)
+
   let tr = document.createElement('tr')
   let valorTotal = valorTotalProdutos()
 
   tbodyPedidos.innerHTML += `
   <tr>
     <td>${cont}</td>
-    <td>${produto.value}</td>
+    <td>${pedidos.produto}</td>
     <td>${document.querySelector('input[name=delivery_1]:checked').value}</td>
     <td>${valorTotal}</td>
-    
+    <td>${status}</td>
   </tr>
   `
   tbodyPedidos.appendChild(tr)
 
-  cont++
-
-  exibirTelalistagem()
+  //cont++
 }
 
 function gerarNumeroAleatorio() {
@@ -165,3 +174,5 @@ function gerarNumeroAleatorio() {
 function valorTotalProdutos() {
   return quantidade.value * preco.value
 }
+
+addEventListener('load', () => adicionarProdutos())
