@@ -8,13 +8,20 @@ function exibirTelalistagem() {
   document.getElementById('page-todos').removeAttribute('hidden')
 }
 
+
 let buscar = document.getElementById('buscar2')
 let preco = document.getElementById('preco')
 let codigoProduto = document.getElementById('codigo-produto')
 let produto = document.getElementById('produto')
 let tbody = document.getElementById('tbody')
-let tableBody = document.getElementById('tableBody')
+let tbodyPedidos=document.getElementById('tbodyPedidos')
 let pedidos = []
+let quantidade=document.getElementById('quantidade')
+let cont=0;
+let deliveryInput=document.getElementById('delivery-Input')
+//let salaoInput=document.getElementById("salao-Input")
+let valorProdutos=[];
+
 
 let listaProdutos = [
   {
@@ -69,12 +76,13 @@ let listaProdutos = [
   }
 ]
 
+
 function filtrarDadosPorNome() {
   let filtrados = []
 
   if (buscar.value !== '') {
     filtrados = listaProdutos.filter(
-      pedidos => pedidos.codigo == codigoProduto.value
+      produtos => produtos.codigo == codigoProduto.value
     )
     console.log(filtrados[0].product)
     produto.value = filtrados[0].product
@@ -82,7 +90,7 @@ function filtrarDadosPorNome() {
   }
 }
 
-function adicionarProutos() {
+function adicionarProdutos() {
   let tr = document.createElement('tr')
 
   tbody.innerHTML += `
@@ -94,6 +102,10 @@ function adicionarProutos() {
     </tr>
     `
   tbody.appendChild(tr)
+  valorProdutos.push(valorTotalProdutos())
+  console.log(valorProdutos)
+  document.getElementById("totalProduto").innerHTML = valorProdutos.reduce((previousValue,currentValue) => previousValue + currentValue, 0)
+  
 }
 
 function limparDadosInpBuscar() {
@@ -106,35 +118,62 @@ function limparFormulario() {
   produto.value = ''
   quantidade.value = ''
   preco.value = ''
-}
-
-function btnSalvarPedido() {
-  let filtrados = []
-
-  if (buscar.value !== '') {
-    filtrados = listaProdutos.filter(
-      pedidos => pedidos.codigo == codigoProduto.value
-    )
-    console.log(filtrados[0].product)
-    produto.value = filtrados[0].product
-    preco.value = filtrados[0].price
-  }
-
-  console.log(pedidos)
-
-  pedidos.push({
-    codigoProduto: codigoProduto.value,
-    produto: produto.value,
-    quantidade: quantidade.value,
-    preco: preco.value
-  })
-
-  tableBody.innerHtml += `
-      <td>${codigoProduto}</td>
-      <td>${produto}</td>
-      <td>${preco}</td>
-    `
+  tbody.innerHTML= ''
   exibirTelalistagem()
 }
 
-addEventListener('load', () => adicionarProutos())
+
+//o <td> tipo(deliveryInput talvez tenha que criar uma função para verificar se e salão ou delivery)
+
+//como faço uma variavel receber o return da função??????
+
+//o <td> valor do pedido tem que receber uma variavel contendo o return da função valorTotalProdutos()
+
+
+function btnSalvarPedido() {
+
+exibirTelalistagem()
+let pedidos=[];
+pedidos.push(tbody)
+
+let tr = document.createElement('tr')
+let valorTotal=valorTotalProdutos()
+
+
+tbodyPedidos.innerHTML += 
+  `
+  <tr>
+    <td>${cont}</td>
+    <td>${pedidos.produto}</td>
+    <td>${document.querySelector("input[name=delivery_1]:checked").value}</td>
+    <td>${valorTotal}</td>
+    <td>${btnStatus}</td>
+  </tr>
+  `
+tbodyPedidos.appendChild(tr)
+
+  
+   //cont++
+  
+}
+
+function gerarNumeroAleatorio() {
+  let x = Math.floor((Math.random() * 1000) + 1);
+document.getElementByClass("type").innerHTML = x;
+
+}
+
+// function randomNumber(a,b) {
+// 	return Math.floor(Math.random() * (b - a + 1)) + a
+// }
+
+//funcao de calcular total dos produtos n esta funcionando corretamente,quantidade esta indefinido?
+function valorTotalProdutos(){
+  return quantidade.value*preco.value;
+}
+
+
+
+
+addEventListener('load', () => adicionarProdutos())
+
