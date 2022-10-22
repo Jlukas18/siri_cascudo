@@ -8,6 +8,7 @@ function exibirTelalistagem() {
   document.getElementById('page-todos').removeAttribute('hidden')
 }
 
+
 let buscar = document.getElementById('buscar2')
 let preco = document.getElementById('preco')
 let codigoProduto = document.getElementById('codigo-produto')
@@ -17,7 +18,10 @@ let tbodyPedidos=document.getElementById('tbodyPedidos')
 let pedidos = []
 let quantidade=document.getElementById('quantidade')
 let cont=0;
-deliveryInput=document.getElementById('delivery-Input')
+let deliveryInput=document.getElementById('delivery-Input')
+//let salaoInput=document.getElementById("salao-Input")
+let valorProdutos=[];
+
 
 let listaProdutos = [
   {
@@ -72,6 +76,7 @@ let listaProdutos = [
   }
 ]
 
+
 function filtrarDadosPorNome() {
   let filtrados = []
 
@@ -97,9 +102,10 @@ function adicionarProdutos() {
     </tr>
     `
   tbody.appendChild(tr)
-  if(adicionarProdutos==true){
-    valorTotalProdutos();
-  }
+  valorProdutos.push(valorTotalProdutos())
+  console.log(valorProdutos)
+  document.getElementById("totalProduto").innerHTML = valorProdutos.reduce((previousValue,currentValue) => previousValue + currentValue, 0)
+  
 }
 
 function limparDadosInpBuscar() {
@@ -112,42 +118,62 @@ function limparFormulario() {
   produto.value = ''
   quantidade.value = ''
   preco.value = ''
+  tbody.innerHTML= ''
+  exibirTelalistagem()
 }
 
 
 //o <td> tipo(deliveryInput talvez tenha que criar uma função para verificar se e salão ou delivery)
+
+//como faço uma variavel receber o return da função??????
+
 //o <td> valor do pedido tem que receber uma variavel contendo o return da função valorTotalProdutos()
+
+
 function btnSalvarPedido() {
 
 exibirTelalistagem()
 let pedidos=[];
-let tr = document.createElement('tr')
-let valorTotalProdutos=
 pedidos.push(tbody)
+
+let tr = document.createElement('tr')
+let valorTotal=valorTotalProdutos()
+
 
 tbodyPedidos.innerHTML += 
   `
   <tr>
     <td>${cont}</td>
     <td>${pedidos.produto}</td>
-    <td>${deliveryInput.value}</td>
-    <td>${valorTotalProdutos}</td>
+    <td>${document.querySelector("input[name=delivery_1]:checked").value}</td>
+    <td>${valorTotal}</td>
+    <td>${btnStatus}</td>
   </tr>
   `
 tbodyPedidos.appendChild(tr)
 
-    cont++
+  
+   //cont++
   
 }
 
-//funcao de calcular total dos produtos n esta funcionando corretamente,quantidade esta indefinido?
-function valorTotalProdutos(total){
-  return total+quantidade.value*preco.value;
+function gerarNumeroAleatorio() {
+  let x = Math.floor((Math.random() * 1000) + 1);
+document.getElementByClass("type").innerHTML = x;
+
 }
 
-document.getElementById("totalProduto").innerHTML = listaProdutos.reduce(valorTotalProdutos, 0);
+// function randomNumber(a,b) {
+// 	return Math.floor(Math.random() * (b - a + 1)) + a
+// }
+
+//funcao de calcular total dos produtos n esta funcionando corretamente,quantidade esta indefinido?
+function valorTotalProdutos(){
+  return quantidade.value*preco.value;
+}
+
+
 
 
 addEventListener('load', () => adicionarProdutos())
-addEventListener('load', () => valorTotalProdutos())
 
