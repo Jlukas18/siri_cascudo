@@ -147,7 +147,7 @@ tbodyPedidos.innerHTML +=
     <td>${pedidos.produto}</td>
     <td>${document.querySelector("input[name=delivery_1]:checked").value}</td>
     <td>${valorTotal}</td>
-    <td>${btnStatus}</td>
+    <td>${status}</td>
   </tr>
   `
 tbodyPedidos.appendChild(tr)
