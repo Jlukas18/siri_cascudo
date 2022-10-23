@@ -1,33 +1,58 @@
-#grid {
-  display: grid;
+html,
+body {
   width: 100%;
-  height: 80vh;
-  grid-template-columns: 300px 2fr;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#grid {
+  display: flex;
+  width: 100%;
+  height: 95%;
 }
 
 #section_1 {
-  width: 100%;
   background-color: white;
+  width: 400px;
+  height: 100%;
 }
 
 #section_2 {
   background-color: whitesmoke;
+  width: 100%;
+  height: 100%;
+}
+
+#page-todos {
+  margin-left: 20px;
 }
 
 #page-novos {
   display: fixed;
+  margin-left: 15px;
 }
 
 .logo {
-  padding: 10px;
+  width: 170px;
+  margin-top: 50px;
+}
+
+.div-Logo {
+  display: flex;
+  justify-content: center;
 }
 
 .info-lateral {
-  padding-top: 370px;
+  margin-left: 20px;
+}
+
+.div-Operador {
+  margin-top: 600px;
 }
 
 .btn-new-products {
-  width: 158px;
+  width: 170px;
   height: 38px;
   background-color: blue;
   color: white;
@@ -117,15 +142,24 @@
   padding-top: 5px;
 }
 
-.roda-pe {
-  margin-left: 500px;
-  margin-top: 78px;
+footer {
+  position: fixed;
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  bottom: 1px; 
+  background-image: linear-gradient( to bottom, #ffffff, #F3F3F3, #ffffff);
+}
+
+.roda-pe > div {
+color: #B3B3B3;
+border-top: 2px solid #F3F3F3;
 }
 
 /* css novos pedidos */
 .new {
   padding-left: 10px;
-  margin-top: -20px;
+  margin-top: 20px;
   line-height: 10px;
 }
 
@@ -174,7 +208,7 @@
   border-color: #FF8B20;
   color: #FF8B20;
   border: 1px solid #FF8B20;
-  border-radius: git 8px;
+  border-radius: 8px;
 }
 
 
@@ -265,17 +299,16 @@
 .div-salvar {
   position: static;
   margin-top: 200px;
-  margin-left: 800px;
+  margin-left: 80%;
 }
 
 #btn-cancelar {
-  width: 100px;
+  width: 102px;
   height: 30px;
   border-radius: 5px;
   border-color: #B3B3B3;
   background-color: #ffffff;
   color: #4A08FF;
-
 }
 
 #btn-cancelar:hover {
@@ -283,10 +316,47 @@
 }
 
 #btn-salvar {
-  width: 100px;
+  width: 138px;
   height: 30px;
   border-radius: 5px;
   border-color: #B3B3B3;
   background-color: #B3B3B3;
   color: antiquewhite;
 }
+
+table,
+tr {
+  text-align: center;
+}
+
+.hoverLaranjaClaro:hover {
+  background-color: rgb(255, 139, 32, 0.1);
+}
+
+.hoverAzulEscuro:hover {
+  background-color: rgba(5, 5, 124, 0.993);
+}
+
+table,
+tr,
+.dados {
+  width: 99%;
+}
+
+.precoDoPedidoProduto {
+  color: #666666;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 22px;
+  margin: 10px;
+}
+
+.precoDoPedidoProduto > input {
+  background: transparent;
+  border: none;
+  color: #666666;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 22px;
+}
+

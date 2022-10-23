@@ -126,9 +126,9 @@ function limparFormulario() {
   quantidade.value = ''
   preco.value = ''
   tbody.innerHTML = ''
+  tbodyPedidos.innerHTML = ''
   exibirTelalistagem()
 }
-
 
 
 function btnSalvarPedido() {
@@ -162,3 +162,5 @@ function gerarNumeroAleatorio() {
 function valorTotalProdutos() {
   return quantidade.value * preco.value
 }
+
+
