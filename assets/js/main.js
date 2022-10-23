@@ -104,8 +104,9 @@ function adicionarProdutos() {
     </tr>
     `
     tbody.appendChild(tr)
+
     valorProdutos.push(valorTotalProdutos())
-    console.log(valorProdutos)
+
     document.getElementById('totalProduto').innerHTML = valorProdutos.reduce(
       (previousValue, currentValue) => previousValue + currentValue,
       0
@@ -127,42 +128,34 @@ function limparFormulario() {
   exibirTelalistagem()
 }
 
-//o <td> tipo(deliveryInput talvez tenha que criar uma função para verificar se e salão ou delivery)
 
-//como faço uma variavel receber o return da função??????
-
-//o <td> valor do pedido tem que receber uma variavel contendo o return da função valorTotalProdutos()
 
 function btnSalvarPedido() {
   exibirTelalistagem()
+  let x=gerarNumeroAleatorio()
   let pedidos = []
   pedidos.push(tbody)
 
   let tr = document.createElement('tr')
-  let valorTotal = valorTotalProdutos()
-
   tbodyPedidos.innerHTML += `
   <tr>
-    <td>${cont}</td>
+    <td>${x}</td>
     <td>${pedidos.produto}</td>
     <td>${document.querySelector('input[name=delivery_1]:checked').value}</td>
-    <td>${valorTotal}</td>
-    <td>${status}</td>
+   
   </tr>
   `
   tbodyPedidos.appendChild(tr)
 
-  //cont++
+  
+ // cont++
 }
 
 function gerarNumeroAleatorio() {
-  let x = Math.floor(Math.random() * 1000 + 1)
-  document.getElementByClass('type').innerHTML = x
+  let x = Math.floor(Math.random() * 3000 + 1)
+  return x;
 }
 
-// function randomNumber(a,b) {
-// 	return Math.floor(Math.random() * (b - a + 1)) + a
-// }
 
 //funcao de calcular total dos produtos n esta funcionando corretamente,quantidade esta indefinido?
 function valorTotalProdutos() {
