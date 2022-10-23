@@ -5,9 +5,10 @@ let produto = document.getElementById('produto')
 let tbody = document.getElementById('tbody')
 let tbodyPedidos = document.getElementById('tbodyPedidos')
 let quantidade = document.getElementById('quantidade')
-let cont = 0
+
 let deliveryInput = document.getElementById('delivery-Input')
 let valorProdutos = []
+let valor=document.getElementById('totalProduto')
 
 function trocaTela() {
   document.getElementById('page-todos').setAttribute('hidden', true)
@@ -107,7 +108,7 @@ function adicionarProdutos() {
 
     valorProdutos.push(valorTotalProdutos())
 
-    document.getElementById('totalProduto').innerHTML = valorProdutos.reduce(
+    document.getElementById('totalProduto').value = valorProdutos.reduce(
       (previousValue, currentValue) => previousValue + currentValue,
       0
     )
@@ -142,7 +143,7 @@ function btnSalvarPedido() {
     <td>${x}</td>
     <td>${pedidos.produto}</td>
     <td>${document.querySelector('input[name=delivery_1]:checked').value}</td>
-   
+    <td>${valor.value}</td>
   </tr>
   `
   tbodyPedidos.appendChild(tr)
