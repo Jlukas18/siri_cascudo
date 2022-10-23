@@ -135,13 +135,13 @@ function btnSalvarPedido() {
   exibirTelalistagem()
   let x=gerarNumeroAleatorio()
   let pedidos = []
-  pedidos.push(tbody)
+  pedidos.push(produto.value)
 
   let tr = document.createElement('tr')
   tbodyPedidos.innerHTML += `
   <tr>
     <td>${x}</td>
-    <td>${pedidos.produto}</td>
+    <td>${pedidos}</td>
     <td>${document.querySelector('input[name=delivery_1]:checked').value}</td>
     <td>${valor.value}</td>
   </tr>
