@@ -19,18 +19,11 @@ function exibirTelalistagem() {
   document.getElementById('page-todos').removeAttribute('hidden')
 }
 
-let buscar = document.getElementById('buscar2')
-let preco = document.getElementById('preco')
-let codigoProduto = document.getElementById('codigo-produto')
-let produto = document.getElementById('produto')
-let tbody = document.getElementById('tbody')
-let tbodyPedidos = document.getElementById('tbodyPedidos')
-let pedidos = []
-let quantidade = document.getElementById('quantidade')
-let cont = 0
-let deliveryInput = document.getElementById('delivery-Input')
-//let salaoInput=document.getElementById("salao-Input")
-let valorProdutos = []
+function verificarCamposobrigatorios() {
+  var validar =
+    document.getElementById(numeroProduto).value !== '' &&
+    document.getElementsById(quantidade).value !== ''
+}
 
 let listaProdutos = [
   {
@@ -101,8 +94,8 @@ function filtrarDadosPorNome() {
 
 function adicionarProdutos() {
   let tr = document.createElement('tr')
-
-  tbody.innerHTML += `
+  if (numeroProduto.value !== '' && quantidade.value !== '') {
+    tbody.innerHTML += `
     <tr>
       <td>${codigoProduto.value}</td>
       <td>${produto.value}</td>
@@ -110,13 +103,14 @@ function adicionarProdutos() {
       <td>${preco.value}</td>
     </tr>
     `
-  tbody.appendChild(tr)
-  valorProdutos.push(valorTotalProdutos())
-  console.log(valorProdutos)
-  document.getElementById('totalProduto').innerHTML = valorProdutos.reduce(
-    (previousValue, currentValue) => previousValue + currentValue,
-    0
-  )
+    tbody.appendChild(tr)
+    valorProdutos.push(valorTotalProdutos())
+    console.log(valorProdutos)
+    document.getElementById('totalProduto').innerHTML = valorProdutos.reduce(
+      (previousValue, currentValue) => previousValue + currentValue,
+      0
+    )
+  } else alert('Preencha todos os campos')
 }
 
 function limparDadosInpBuscar() {
@@ -174,5 +168,3 @@ function gerarNumeroAleatorio() {
 function valorTotalProdutos() {
   return quantidade.value * preco.value
 }
-
-addEventListener('load', () => adicionarProdutos())
