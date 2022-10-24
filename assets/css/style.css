@@ -9,7 +9,7 @@ body {
 #grid {
   display: flex;
   width: 100%;
-  height: 95%;
+  height: 90vh;
 }
 
 #section_1 {
@@ -45,11 +45,9 @@ body {
 
 .info-lateral {
   margin-left: 20px;
+  margin-top: 390px;
 }
 
-.div-Operador {
-  margin-top: 600px;
-}
 
 .btn-new-products {
   width: 170px;
@@ -147,13 +145,13 @@ footer {
   width: 100%;
   height: 5%;
   text-align: center;
-  bottom: 1px; 
-  background-image: linear-gradient( to bottom, #ffffff, #F3F3F3, #ffffff);
+  bottom: 1px;
+  background-image: linear-gradient(to bottom, #ffffff, #F3F3F3, #ffffff);
 }
 
-.roda-pe > div {
-color: #B3B3B3;
-border-top: 2px solid #F3F3F3;
+.roda-pe>div {
+  color: #B3B3B3;
+  border-top: 2px solid #F3F3F3;
 }
 
 /* css novos pedidos */
@@ -296,11 +294,6 @@ border-top: 2px solid #F3F3F3;
   padding-top: 5px;
 }
 
-.div-salvar {
-  position: static;
-  margin-top: 200px;
-  margin-left: 80%;
-}
 
 #btn-cancelar {
   width: 102px;
@@ -343,15 +336,24 @@ tr,
   width: 99%;
 }
 
+.total-salvar {
+  display: flex;
+}
+
+.salvar {
+  margin-left: 800px;
+}
+
 .precoDoPedidoProduto {
   color: #666666;
   font-size: 30px;
   font-weight: 700;
   line-height: 22px;
-  margin: 10px;
+  margin-top: 170px;
 }
 
-.precoDoPedidoProduto > input {
+.precoDoPedidoProduto>input {
+  width: 50px;
   background: transparent;
   border: none;
   color: #666666;
@@ -359,4 +361,3 @@ tr,
   font-weight: 700;
   line-height: 22px;
 }
-

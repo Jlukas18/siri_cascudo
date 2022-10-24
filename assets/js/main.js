@@ -8,7 +8,7 @@ let quantidade = document.getElementById('quantidade')
 
 let deliveryInput = document.getElementById('delivery-Input')
 let valorProdutos = []
-let valor=document.getElementById('totalProduto')
+let valor = document.getElementById('totalProduto')
 
 function trocaTela() {
   document.getElementById('page-todos').setAttribute('hidden', true)
@@ -125,15 +125,15 @@ function limparFormulario() {
   produto.value = ''
   quantidade.value = ''
   preco.value = ''
+  valor.value = ''
   tbody.innerHTML = ''
   tbodyPedidos.innerHTML = ''
   exibirTelalistagem()
 }
 
-
 function btnSalvarPedido() {
   exibirTelalistagem()
-  let x=gerarNumeroAleatorio()
+  let x = gerarNumeroAleatorio()
   let pedidos = []
   pedidos.push(produto.value)
 
@@ -148,19 +148,15 @@ function btnSalvarPedido() {
   `
   tbodyPedidos.appendChild(tr)
 
-  
- // cont++
+  // cont++
 }
 
 function gerarNumeroAleatorio() {
   let x = Math.floor(Math.random() * 3000 + 1)
-  return x;
+  return x
 }
-
 
 //funcao de calcular total dos produtos n esta funcionando corretamente,quantidade esta indefinido?
 function valorTotalProdutos() {
   return quantidade.value * preco.value
 }
-
-
